@@ -17,6 +17,10 @@ public class ComputerConfig {
     public Monitor monitorSony(){
         return new SonyMonitor("25 inch Beast", "Aser",25);
     }
+    @Bean(name = "sony2")
+    public Monitor monitorSony2(){
+        return new SonyMonitor("40 inch Beast", "Aser",40);
+    }
     @Bean
     @Primary
     public Monitor monitorAcer(){
