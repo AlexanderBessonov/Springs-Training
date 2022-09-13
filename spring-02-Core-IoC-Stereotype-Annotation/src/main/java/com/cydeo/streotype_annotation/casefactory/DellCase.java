@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DellCase extends Case  {
 
-    public DellCase(String s, String dell, String s1) {
+    public DellCase() {
         super("2208","Dell","240");
     }
 
