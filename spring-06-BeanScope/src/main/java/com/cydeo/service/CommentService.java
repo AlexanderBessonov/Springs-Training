@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Scope("prototype")
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class CommentService {
 
