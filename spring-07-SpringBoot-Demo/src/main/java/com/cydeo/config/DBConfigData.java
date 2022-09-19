@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 public class DBConfigData {
 
-    private String username;
+    private String usernamE;
     private String password;
     private List<String> type;
 }

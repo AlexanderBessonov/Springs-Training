@@ -35,7 +35,7 @@ public class CommentService {
     }
     public void printConfigData(){
         //print ozzy
-        System.out.println(appConfigData.getUserName());
+        System.out.println(appConfigData.getUsernamE());
         //print abc123
         System.out.println(appConfigData.getPassword());
         //print url
@@ -45,7 +45,7 @@ public class CommentService {
 
     public void printDbConfigData(){
 
-        System.out.println(dbConfigData.getUsername());
+        System.out.println(dbConfigData.getUsernamE());
         System.out.println(dbConfigData.getPassword());
         System.out.println(dbConfigData.getType());
 

@@ -8,6 +8,7 @@ import com.cydeo.loosely_coupled.motherboardfactory.Motherboard;
 public class PC {
 
     private Case theCase;
+
     private Monitor monitor;
     private Motherboard motherboard;
 

@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Data
 @Configuration
 public class AppConfigData {
-    @Value("${username}")
-private String userName;
+    @Value("${usernamE}")
+private String usernamE;
     @Value("${password}")
 private String password;
     @Value("${url}")
