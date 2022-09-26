@@ -9,10 +9,37 @@
 <!--Display Value of model-->
 <h2 th:text="${student.get(0).firstName}"></h2>
 <h2 th:text="${student.get(0).lastName}"></h2>
+
 <!--Concatenation-->
 <h2 th:text="${'Hello '+student.get(0).firstName}"></h2>
 <h2 th:text="${student.get(0).firstName + ' ' + student.get(0).lastName}"></h2>
 
+<!--Link -->
+<h2>
+<a th:href="@{https://cydeo.com}">Cydeo Page </a>
+</h2>
+<h2>
+    <a th:href="@{/student/welcome}">Welcome </a>
+</h2>
+<!--Adding Parameters in Link-->
+<h2>
+    <a th:href="@{/student/welcome(id=3)}">Link1</a>
+</h2>
+<h2>
+    <a th:href="@{/student/welcome(name=${student.get(0).firstName})}">FirstName</a>
+</h2>
+<!-- Iteration-->
+<h2>Printing Student`s First Name</h2>
+<ul>
+    <li th:each=" name: ${student}" th:text="${name.firstName}"></li>
+    <!-- for(String name: student){ -->
+</ul>
+<h2>Printing Student`s Last Name</h2>
+<ul>
+    <li th:each=" name: ${student}" th:text="${name.lastName}"></li>
+    <!-- for(String name: student){ -->
 
+
+</ul>
 </body>
 </html>
