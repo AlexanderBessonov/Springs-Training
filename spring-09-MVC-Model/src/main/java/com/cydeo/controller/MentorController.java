@@ -1,6 +1,6 @@
 package com.cydeo.controller;
 
-import com.cydeo.controller.enums.Gender;
+import com.cydeo.enums.Gender;
 import com.cydeo.model.Mentor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
