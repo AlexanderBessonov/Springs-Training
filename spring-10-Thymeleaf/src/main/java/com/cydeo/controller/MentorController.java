@@ -6,15 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/mentor")
 public class MentorController {//locathost:8080/mentor/register
-
+/*
     @RequestMapping("/register")
     public String register(){
 
-        return "student/register";
+        return "mentor/register";
     }
     @RequestMapping("/register")
     public String drop(){
 
-        return "student/register";
+        return "mentor/drop";
     }
+
+*/
 }
