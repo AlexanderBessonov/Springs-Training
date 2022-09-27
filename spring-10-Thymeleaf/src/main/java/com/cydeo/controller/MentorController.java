@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/mentor")
 public class MentorController {//locathost:8080/mentor/register
-/*
+
     @RequestMapping("/register")
     public String register(){
 
@@ -18,5 +18,5 @@ public class MentorController {//locathost:8080/mentor/register
         return "mentor/drop";
     }
 
-*/
+
 }
