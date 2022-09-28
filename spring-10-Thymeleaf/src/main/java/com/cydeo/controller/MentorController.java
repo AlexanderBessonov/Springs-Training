@@ -27,14 +27,20 @@ public class MentorController {//locathost:8080/mentor/register
         return "mentor/mentor-register";
     }
     @PostMapping("/confirm")
-    public String submitForm(@ModelAttribute("mentor")Mentor mentor){
+   // public String submitForm(@ModelAttribute("mentor")Mentor mentor, Model model){
+        public String submitForm(@ModelAttribute("mentor")Mentor mentor){
+        //return "mentor/mentor-confirmation";
 
+//        model.addAttribute("mentor", new Mentor());
+//         return "mentor/mentor-register";
 
-        return "mentor/mentor-confirmation";
+         return "redirect: /mentor/register";
     }
-//    @GetMapping("/confirm")
+
+    //*******************************************
+//    @GetMappng("/confirm")
 //    public String submitForm2(){
-//
+//i
 //        return "mentor/mentor-confirmation";
 //    }
 }
