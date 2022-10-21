@@ -33,8 +33,8 @@ public class MentorController {//locathost:8080/mentor/register
 
 //        model.addAttribute("mentor", new Mentor());
 //         return "mentor/mentor-register";
+        return "redirect:/mentor/register";
 
-         return "redirect: /mentor/register";
     }
 
     //*******************************************
