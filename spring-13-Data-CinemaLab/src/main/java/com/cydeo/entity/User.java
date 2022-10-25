@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "user_account")
 public class User extends BaseEntity{
 
 
