@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cydeo</groupId>
-    <artifactId>spring-12-Data-CinemaLab</artifactId>
+    <artifactId>spring-13-Data-CinemaLab</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-12-Data-CinemaLab</name>
-    <description>spring-12-Data-CinemaLab</description>
+    <name>spring-13-Data-CinemaLab</name>
+    <description>spring-13-Data-CinemaLab</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -22,20 +22,10 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
