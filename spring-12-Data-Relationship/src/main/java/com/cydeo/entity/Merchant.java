@@ -23,8 +23,8 @@ public class Merchant {
     private BigDecimal commissionRate;
     private Integer payoutDelayCount;
 
-//    @OneToMany(mappedBy = "merchant")// in OneToMany relationship, ownership belongs to many side
-//    private List<Payment> paymentList;//(mappedBy = "merchant")->don't try to create in "merchant"
+    @OneToMany(mappedBy = "merchant")// in OneToMany relationship, ownership belongs to many side
+    private List<Payment> paymentList;//(mappedBy = "merchant")->don't try to create in "merchant"
 
     public Merchant(String name, String code, BigDecimal transactionFee, BigDecimal commissionRate,
                     Integer payoutDelayCount) {
