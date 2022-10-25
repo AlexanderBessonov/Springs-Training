@@ -2,8 +2,7 @@ package com.cydeo.bootstrap;
 
 import com.cydeo.entity.*;
 import com.cydeo.enums.Status;
-import com.cydeo.repository.MerchantRepository;
-import com.cydeo.repository.PaymentRepository;
+import com.cydeo.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,9 +16,18 @@ public class DataGenerator implements CommandLineRunner {
     private final PaymentRepository paymentRepository;
     private final MerchantRepository merchantRepository;
 
-    public DataGenerator(PaymentRepository paymentRepository, MerchantRepository merchantRepository) {
+    private final ItemRepository itemRepository;
+
+    private final CartRepository cartRepository;
+
+    private final CustomerRepository customerRepository;
+
+    public DataGenerator(PaymentRepository paymentRepository, MerchantRepository merchantRepository, ItemRepository itemRepository, CartRepository cartRepository, CustomerRepository customerRepository) {
         this.paymentRepository = paymentRepository;
         this.merchantRepository = merchantRepository;
+        this.itemRepository = itemRepository;
+        this.cartRepository = cartRepository;
+        this.customerRepository = customerRepository;
     }
 
     @Override
@@ -40,6 +48,8 @@ public class DataGenerator implements CommandLineRunner {
         Cart cart1 = new Cart();
         Cart cart2 = new Cart();
 
+
+
         cart1.setItemList(Arrays.asList(item1,item2,item3));
         cart2.setItemList(Arrays.asList(item1,item2));
 
@@ -47,19 +57,37 @@ public class DataGenerator implements CommandLineRunner {
         payment2.setPaymentDetail(paymentDetail2);
 
         Merchant merchant1 = new Merchant("AmazonSubMerchant","M123",new BigDecimal("0.25"),new BigDecimal("3.25"),5);
-
         payment1.setMerchant(merchant1);
         payment2.setMerchant(merchant1);
 
-       merchantRepository.save(merchant1);//#1 Ex Amazon
+        Customer customer1 = new Customer("Main St 111","Mike@gmail.com","Mike","Ford","SuperMike");
+        Customer customer2 = new Customer("Main St 222","John@gmail.com","John","Simson","luckyJohn");
+        payment1.setCustomer(customer1);
+        payment2.setCustomer(customer2);
 
-       //paymentDetailRepository.save(paymentDetail1);//----
+        payment1.setCart(cart1);
+        payment2.setCart(cart2);
+
+        itemRepository.save(item1);
+        itemRepository.save(item2);
+        itemRepository.save(item3);
+
+        cartRepository.save(cart1);
+        cartRepository.save(cart2);
+
+        merchantRepository.save(merchant1);//#1 Ex Amazon
+        customerRepository.save(customer1);
+        customerRepository.save(customer2);
+
+       // paymentDetailRepository.save(paymentDetail1);//----
        // paymentDetailRepository.save(paymentDetail2);//----
 
         paymentRepository.save(payment1);//#2 Ex payments
         paymentRepository.save(payment2);
 
-      // System.out.println(paymentRepository.findById(2L).get().getPaymentDetail().getCommissionAmount());
+
+
+       // System.out.println(paymentRepository.findById(2L).get().getPaymentDetail().getCommissionAmount());
        // paymentRepository.delete(payment1);
     }
 }
