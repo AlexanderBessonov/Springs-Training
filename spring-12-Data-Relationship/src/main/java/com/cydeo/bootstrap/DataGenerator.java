@@ -2,7 +2,12 @@ package com.cydeo.bootstrap;
 
 import com.cydeo.entity.*;
 import com.cydeo.enums.Status;
-import com.cydeo.repository.*;
+import com.cydeo.repositiry.CustomerRepository;
+
+import com.cydeo.repository.CartRepository;
+import com.cydeo.repository.ItemRepository;
+import com.cydeo.repository.MerchantRepository;
+import com.cydeo.repository.PaymentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

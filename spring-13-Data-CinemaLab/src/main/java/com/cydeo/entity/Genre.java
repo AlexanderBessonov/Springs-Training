@@ -11,15 +11,11 @@ import javax.persistence.Id;
 @Entity
 @Data
 @NoArgsConstructor
-public class Genre {
+public class Genre extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
 
     private String name;
 
-    public Genre(String name) {
-        this.name = name;
-    }
+
 }
