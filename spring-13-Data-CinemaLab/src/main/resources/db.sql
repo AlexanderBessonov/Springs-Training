@@ -134,4 +134,3 @@ INSERT INTO ticket (date_time, row_number, seat_number, movie_cinema_id, user_ac
                    ('2020-12-08 19:00:00', 11, 5, (SELECT id FROM movie_cinema WHERE cinema_id = (SELECT c.id FROM cinema c WHERE c.name = 'Hall 3 - STREET 14') AND movie_id = (SELECT m.id FROM movie m WHERE m.name = 'The Shawshank Redemption') LIMIT 1), (SELECT id from user_account WHERE email = 'lawrence.f@email.com'));
 
 
-
