@@ -39,5 +39,10 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findByDepartment"+departmentRepository.findByDepartment("Furniture"));
 
         System.out.println("findByDivision"+departmentRepository.findByDivision("Health"));
+
+        System.out.println("findByDivisionEndsWith"+departmentRepository.findByDivisionEndsWith("ics"));
+
+        System.out.println("findDistinctTop3ByDivisionContains"+departmentRepository.findDistinctTop3ByDivisionContains("Hea"));
+
     }
 }
