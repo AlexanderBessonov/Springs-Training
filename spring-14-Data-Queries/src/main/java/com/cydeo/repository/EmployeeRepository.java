@@ -47,4 +47,13 @@ public interface EmployeeRepository extends JpaRepository <Employee, Integer> {
     @Query("SELECT e.salary from Employee  e WHERE e.email='amcnee1@google.es'")
     Integer retrieveEmployeeSalary();
 
+    //Not Equal <>
+    @Query("SELECT e FROM Employee e WHERE  e.salary <> ?1")
+    List <Employee> retrieveEmployeeSalaryNotEqual (int salary);
+
+    //Like / Contains / Startswiths / Endswith
+    @Query("SELECT e FROM Employee e WHERE e.firstName LIKE ?1")
+    List <Employee> retrieveEmployeeFirstNameLike (String pattern);
+
+
 }
