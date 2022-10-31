@@ -39,7 +39,7 @@ public interface EmployeeRepository extends JpaRepository <Employee, Integer> {
     List <Employee> findDistinctTop3BySalaryLessThan (Integer salary);
 
     //Display all employees that who do NOT have email address
-    List <Employee> findByEmailIsNull (String email);
+    List <Employee> findByEmailIsNull ();
 
     //************************************* JPQL or SQL *******************************************
     @Query("SELECT employee FROM Employee employee WHERE employee.email='amcnee1@google.es'")
