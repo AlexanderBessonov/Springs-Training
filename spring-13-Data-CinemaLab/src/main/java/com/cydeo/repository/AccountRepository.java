@@ -19,7 +19,7 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     List<Account> findAllByCountryOrState(String country,String state);
 
     //Write a derived query to list all accounts with age lower than or equal to a specific value
-    List<Account> findAllByAgeLessThanEquals   (Integer age);
+    List<Account> findAllByAgeLessThanEqual  (Integer age);
 
     //Write a derived query to list all accounts with a specific role
     List<Account> findByRole(UserRole role); // findAllByRole(UserRole role)  -> Same thing
