@@ -54,11 +54,11 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
      List<Account> retrieveAllByAgeLowerThan(@Param("age") Integer age);
 
     //Write a native query to read all accounts that a specific value can be containable in the name, address, country, state city
-    @Query(value = "SELECT * FROM account_details ad where name ILIKE concat (%, ?1 ,%) " +
-            "OR address ILIKE concat (%, ?1 ,%) " +
-            "OR country ILIKE concat (%, ?1 ,%) " +
-            "OR ad.state ILIKE concat (%, ?1 ,%) " + //OR ad.state ILIKE '%' || ?1 || '%'
-            "OR city ILIKE concat (%, ?1 ,%)",nativeQuery = true)
+    @Query(value = "SELECT * FROM account_details ad where name ILIKE concat ('%', ?1 ,'%') " +
+            "OR address ILIKE concat ('%', ?1 ,'%') " +
+            "OR country ILIKE concat ('%', ?1 ,'%') " +
+            "OR ad.state ILIKE concat ('%', ?1 ,'%') " + //OR ad.state ILIKE '%' || ?1 || '%'
+            "OR city ILIKE concat ('%', ?1 ,'%')",nativeQuery = true)
     List<Account> retrieveBySearchCriteria(@Param("pattern") String pattern);
 
     //Write a native query to read all accounts with an age higher than a specific value
