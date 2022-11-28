@@ -3,10 +3,7 @@ package com.cydeo.controller;
 import com.cydeo.dto.CourseDTO;
 import com.cydeo.service.CourseService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,6 +25,11 @@ public class CourseController {
         return courseService.getCourses();   // return All courses
 
        // return "view";//----No
+    }
+    @GetMapping("{id}")
+    public CourseDTO getCourseById(@PathVariable("id") Long courseId){
+
+        return courseService.getCourseById(courseId);
     }
 
 }
