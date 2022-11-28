@@ -41,5 +41,15 @@ public class CourseController {
 
         return courseService.createCourse(course);
     }
+    @PutMapping("{id}")
+    public void updateCourse(@PathVariable("id") Long courseId, @RequestBody CourseDTO course){
 
+       courseService.updateCourse(courseId, course);
+    }
+
+    @DeleteMapping("{id}")
+    public void deleteCourseById(@PathVariable("id") Long courseId){
+
+        courseService.deleteCourseById(courseId);
+    }
 }
