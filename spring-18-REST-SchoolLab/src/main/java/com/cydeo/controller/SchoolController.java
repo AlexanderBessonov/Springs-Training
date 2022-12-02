@@ -60,6 +60,6 @@ public class SchoolController {
     public AddressDTO updateAddress(@PathVariable("id") Long id, @RequestBody AddressDTO addressDTO) throws Exception {
 
         addressDTO.setId(id);
-        addressService.update(addressDTO);
+       return addressService.update(addressDTO);
     }
 }
