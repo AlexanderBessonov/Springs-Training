@@ -23,7 +23,7 @@ public class WeatherDTO {
     @JsonProperty("request")
     private RequestDTO request;
     @JsonProperty("location")
-    private Location location;
+    private LocationDTO location;
     @JsonProperty("current")
     private CurrentDTO current;
     @JsonIgnore
@@ -40,12 +40,12 @@ public class WeatherDTO {
     }
 
     @JsonProperty("location")
-    public Location getLocation() {
+    public LocationDTO getLocation() {
         return location;
     }
 
     @JsonProperty("location")
-    public void setLocation(Location location) {
+    public void setLocation(LocationDTO location) {
         this.location = location;
     }
 
