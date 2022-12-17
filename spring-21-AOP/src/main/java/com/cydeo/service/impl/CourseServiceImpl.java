@@ -5,7 +5,7 @@ import com.cydeo.entity.Course;
 import com.cydeo.repository.CourseRepository;
 import com.cydeo.service.CourseService;
 import com.cydeo.util.MapperUtil;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service; //AOP
 
 import java.util.List;
 import java.util.stream.Collectors;
