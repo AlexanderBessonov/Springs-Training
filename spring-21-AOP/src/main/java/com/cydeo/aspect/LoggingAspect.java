@@ -22,6 +22,7 @@ public class LoggingAspect {
    //     logger.info("Information about application");
    // }
            //******************* @Before ********************
+
 //    @Pointcut("execution(* com.cydeo.controller.CourseController.*(..))")
 //    public void myPointcut() {}
 //
@@ -35,6 +36,7 @@ public class LoggingAspect {
 //        logger.info("Info log............");
 //    }
 //       //**********************************************
+
 //    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
 //    public void courseRepositoryFindByIdPC() {}
 //
@@ -46,6 +48,7 @@ public class LoggingAspect {
 //   }
 
     //************************** || **************************
+
 //    @Pointcut("within(com.cydeo.controller..*)")
 //    public void anyControllerOperation() {}
 //
@@ -100,6 +103,7 @@ public class LoggingAspect {
     // Object  -> CourseDTO -->> This is NOT Ok!
 
 //*************************** @AfterThrowing ** logger.error ****************************
+
 //    @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
 //    public void afterReturningGetMappingAnnotation() {}
 //
@@ -111,6 +115,7 @@ public class LoggingAspect {
 //    }
 
     //**************************** @Around **********************************
+
     @Pointcut("@annotation(com.cydeo.annotation.LoggingAnnotation)")
     public void loggingAnnotationPC() {}
 
