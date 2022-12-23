@@ -31,6 +31,7 @@
         <module name="spring-14-Data-Queries" />
         <module name="spring-04-Autowiring" />
         <module name="spring-07-SpringBoot-Demo" />
+        <module name="spring-24-UnitTesting-MockMVC" />
       </profile>
     </annotationProcessing>
   </component>
@@ -52,6 +53,7 @@
       <module name="spring-20-REST-Security-Keycloak-LicenseApp" options="-parameters" />
       <module name="spring-20-REST-Security-Keycloak-OrganizationsApp" options="-parameters" />
       <module name="spring-21-AOP" options="-parameters" />
+      <module name="spring-24-UnitTesting-MockMVC" options="-parameters" />
       <module name="ticketing-project-data" options="-parameters" />
     </option>
   </component>
